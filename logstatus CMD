@@ -598,14 +598,23 @@
       "name": "Store Server Info"
     },
     {
-      "title": "",
+      "title": "__**Status Atuais**__",
       "author": "",
       "color": "#36393F",
-      "timestamp": "false",
       "url": "",
       "authorIcon": "",
+      "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
       "storage": "1",
       "varName": "embed",
       "name": "Create Embed Message"
@@ -613,8 +622,8 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Obecne statusy",
-      "message": "**VC Stworzony**: *${tempVars(\"enabledis1\")}*\n**VC Usuniety**: *${tempVars(\"enabledis2\")}*\n**Aktualizacja roli**: ${tempVars(\"enabledis3\")}\n**Stworzenie roli**: ${tempVars(\"enabledis11\")}\n**Usuniecie roli**: ${tempVars(\"enabledis12\")}\n**Stworzenie kanalu**: *${tempVars(\"enabledis4\")}*\n**Usuniecie kanalu**: *${tempVars(\"enabledis5\")}*\n**Channel Updated**: *${tempVars(\"enabledis6\")}*\n**Member Joined**: *${tempVars(\"enabledis7\")}*\n**Member Left**: *${tempVars(\"enabledis8\")}*\n**Message Deleted**: *${tempVars(\"enabledis9\")}*\n**Message Edited**: *${tempVars(\"enabledis10\")}*",
+      "fieldName": "Logs ativos",
+      "message": "```Cargo criado: ${tempVars(\"enabledis11\")} ```\n```Cargo atualizado: ${tempVars(\"enabledis3\")}```\n```Cargo excluído: ${tempVars(\"enabledis12\")} ```\n```Canal de txt criado: ${tempVars(\"enabledis4\")}```\n```Canal de txt atualizado: ${tempVars(\"enabledis6\")}```\n```Canal de txt excluído: ${tempVars(\"enabledis5\")}```\n```Canal de voz criado: ${tempVars(\"enabledis1\")}```\n```Canal de voz excluído: ${tempVars(\"enabledis2\")}```\n```Mensagem excluida: ${tempVars(\"enabledis9\")}```\n```Mensagem editada: ${tempVars(\"enabledis10\")}```\n```Membro entrou: ${tempVars(\"enabledis7\")}```\n```Membro saiu: ${tempVars(\"enabledis8\")}```",
       "inline": "0",
       "name": "Add Embed Field"
     },
