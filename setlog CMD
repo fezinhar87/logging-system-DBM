@@ -1,5 +1,5 @@
 {
-  "name": "set-log",
+  "name": "setlog",
   "permissions": "NONE",
   "restriction": "1",
   "_id": "wnrVr",
@@ -42,7 +42,7 @@
     {
       "storage": "1",
       "varName": "error",
-      "message": ":x: Nie posiadasz permisji. Brakująca permisja: `ADMINISTRATOR`",
+      "message": ":x: Você não tem permissões de ADM.",
       "name": "Set Embed Description"
     },
     {
@@ -81,7 +81,7 @@
     {
       "storage": "1",
       "varName": "error2",
-      "message": ":x: Musisz oznaczyć kanał!",
+      "message": ":x: Você precisa mencinar o canal!",
       "name": "Set Embed Description"
     },
     {
@@ -121,9 +121,12 @@
       "varName": "swc",
       "channel": "0",
       "varName2": "",
-      "varName3": "delete",
       "storage3": "1",
-      "name": "Send Embed Message MOD"
+      "varName3": "delete",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
     },
     {
       "time": "3",
@@ -136,7 +139,7 @@
       "name": "Delete Message"
     },
     {
-      "title": "Pomyślnie ustawiono",
+      "title": "Configurado com sucesso",
       "author": "",
       "color": "RED",
       "url": "",
@@ -160,7 +163,7 @@
     {
       "storage": "1",
       "varName": "cs",
-      "message": "Wszystko, co jest związane z logami, zostanie opublikowane w ${serverVars(\"mlchannel\")} od teraz.",
+      "message": "Tudo relacionado aos logs será publicado em ${serverVars(\"mlchannel\")} de agora em diante.",
       "name": "Set Embed Description"
     },
     {
