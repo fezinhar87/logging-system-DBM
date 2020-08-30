@@ -1,7 +1,7 @@
 DBM log system
 
 
-Comandos:
+Commands:
 [p]setlog
 [p]togglelog
 [p]logstatus
