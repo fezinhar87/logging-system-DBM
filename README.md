@@ -1,5 +1,9 @@
-Log status
-Setlogchannel
-Togglelog
+DBM log system
 
-do komend reszta do eventow
+
+Comandos:
+[p]setlog
+[p]togglelog
+[p]logstatus
+
+
