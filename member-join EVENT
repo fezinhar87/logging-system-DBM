@@ -70,21 +70,21 @@
     {
       "server": "0",
       "varName": "",
-      "info": "17",
+      "info": "35",
       "storage": "1",
       "varName2": "mcount",
-      "name": "Store Server Things"
+      "name": "Store Server Info"
     },
     {
       "member": "2",
       "varName": "member",
-      "info": "7",
+      "info": "21",
       "storage": "1",
       "varName2": "tag",
-      "name": "Store Member Things"
+      "name": "Store Member Info"
     },
     {
-      "title": "Użytkownik dołączył",
+      "title": "__**Novo membro**__",
       "author": "${tempVars(\"tag\")}",
       "color": "#3dd0f4",
       "url": "",
@@ -108,7 +108,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Osoba",
+      "fieldName": "__**Nome:**__",
       "message": "<@${tempVars(\"id\")}>",
       "inline": "0",
       "name": "Add Embed Field"
@@ -116,7 +116,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Ilość osób",
+      "fieldName": "__**Total de embros:**__",
       "message": "${tempVars(\"mcount\")}",
       "inline": "0",
       "name": "Add Embed Field"
@@ -133,6 +133,11 @@
       "varName": "embed",
       "channel": "6",
       "varName2": "mlchannel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
       "name": "Send Embed Message"
     },
     {
@@ -147,7 +152,7 @@
     {
       "server": "0",
       "varName": "",
-      "dataName": "log_system",
+      "dataName": "mj_system",
       "changeType": "1",
       "value": "1",
       "name": "Control Server Data"
