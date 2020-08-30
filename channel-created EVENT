@@ -1,13 +1,13 @@
 {
-  "name": "role-deleted",
-  "temp": "roledeleted",
-  "event-type": "11",
-  "_id": "VDYKZ",
+  "name": "channel-created",
+  "temp": "channelcreated",
+  "event-type": "8",
+  "_id": "AAVpZ",
   "actions": [
     {
       "server": "0",
       "varName": "",
-      "dataName": "isenabled12",
+      "dataName": "isenabled4",
       "defaultVal": "1",
       "storage": "1",
       "varName2": "isenabled",
@@ -16,7 +16,7 @@
     {
       "server": "0",
       "varName": "",
-      "dataName": "isenabled12",
+      "dataName": "isenabled4",
       "comparison": "1",
       "value": "1",
       "iftrue": "0",
@@ -26,31 +26,12 @@
       "name": "Check Server Data"
     },
     {
-      "role": "3",
-      "varName": "roledeleted",
-      "info": "2",
-      "storage": "1",
-      "varName2": "name",
-      "name": "Store Role Info"
-    },
-    {
-      "storage": "1",
-      "varName": "name",
-      "comparison": "5",
-      "value": "ticket-",
-      "iftrue": "0",
-      "iftrueVal": "",
-      "iffalse": "1",
-      "iffalseVal": "",
-      "name": "Check Variable"
-    },
-    {
       "server": "0",
       "varName": "",
-      "dataName": "rd_system",
+      "dataName": "cc_system",
       "defaultVal": "0",
       "storage": "1",
-      "varName2": "rd_sys",
+      "varName2": "cc_sys",
       "name": "Store Server Data"
     },
     {
@@ -71,25 +52,52 @@
       "name": "Control Server Data"
     },
     {
-      "role": "3",
-      "varName": "roledeleted",
+      "channel": "3",
+      "varName": "channelcreated",
+      "info": "2",
+      "storage": "1",
+      "varName2": "channelname",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "channelname",
+      "comparison": "5",
+      "value": "ticket-",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "3",
+      "varName": "channelcreated",
       "info": "1",
       "storage": "1",
       "varName2": "id",
-      "name": "Store Role Info"
+      "name": "Store Channel Info"
     },
     {
-      "role": "3",
-      "varName": "roledeleted",
-      "info": "3",
+      "channel": "3",
+      "varName": "channelcreated",
+      "info": "6",
       "storage": "1",
-      "varName2": "color",
-      "name": "Store Role Info"
+      "varName2": "isnsfw",
+      "name": "Store Channel Info"
     },
     {
-      "title": "Rola usunięta",
+      "channel": "3",
+      "varName": "channelcreated",
+      "info": "10",
+      "storage": "1",
+      "varName2": "category",
+      "name": "Store Channel Info"
+    },
+    {
+      "title": "__**Canal criado**__",
       "author": "",
-      "color": "${tempVars(\"color\")}",
+      "color": "#20fc3a",
       "url": "",
       "authorIcon": "",
       "authorUrl": "",
@@ -111,23 +119,51 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Nazwa",
-      "message": "${tempVars(\"name\")}",
+      "fieldName": "__**Nome:**__",
+      "message": "<#${tempVars(\"id\")}>",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "category",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__**Categoria:**__",
+      "message": "${tempVars(\"category\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "2",
+      "varName": "category",
+      "name": "Save Variable"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__**Categoria:**__",
+      "message": "Nenhuma",
       "inline": "0",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Kolor",
-      "message": "${tempVars(\"color\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "message": "ID : ${tempVars(\"id\")}",
+      "message": "ID: ${tempVars(\"id\")}",
       "footerIcon": "",
       "name": "Set Embed Footer"
     },
@@ -141,16 +177,16 @@
     {
       "server": "0",
       "varName": "",
-      "dataName": "rd_system",
+      "dataName": "cc_system",
       "defaultVal": "0",
       "storage": "1",
-      "varName2": "rd_sys",
+      "varName2": "cc_sys",
       "name": "Store Server Data"
     },
     {
       "server": "0",
       "varName": "",
-      "dataName": "rd_system",
+      "dataName": "cc_system",
       "changeType": "1",
       "value": "1",
       "name": "Control Server Data"
