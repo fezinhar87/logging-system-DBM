@@ -1,13 +1,13 @@
 {
-  "name": "role-created",
-  "temp": "rolecreated",
-  "event-type": "10",
-  "_id": "ChohJ",
+  "name": "v-channel-created",
+  "temp": "channelcreated",
+  "event-type": "14",
+  "_id": "YOeFC",
   "actions": [
     {
       "server": "0",
       "varName": "",
-      "dataName": "isenabled11",
+      "dataName": "isenabled1",
       "defaultVal": "1",
       "storage": "1",
       "varName2": "isenabled",
@@ -16,7 +16,7 @@
     {
       "server": "0",
       "varName": "",
-      "dataName": "isenabled11",
+      "dataName": "isenabled1",
       "comparison": "1",
       "value": "1",
       "iftrue": "0",
@@ -26,36 +26,12 @@
       "name": "Check Server Data"
     },
     {
-      "time": "7",
-      "measurement": "1",
-      "name": "Wait"
-    },
-    {
-      "role": "3",
-      "varName": "rolecreated",
-      "info": "2",
-      "storage": "1",
-      "varName2": "name",
-      "name": "Store Role Info"
-    },
-    {
-      "storage": "1",
-      "varName": "name",
-      "comparison": "5",
-      "value": "ticket-",
-      "iftrue": "1",
-      "iftrueVal": "",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Check Variable"
-    },
-    {
       "server": "0",
       "varName": "",
-      "dataName": "rc_system",
+      "dataName": "vcc_system",
       "defaultVal": "0",
       "storage": "1",
-      "varName2": "rc_sys",
+      "varName2": "vcc_sys",
       "name": "Store Server Data"
     },
     {
@@ -76,25 +52,33 @@
       "name": "Control Server Data"
     },
     {
-      "role": "3",
-      "varName": "rolecreated",
+      "channel": "3",
+      "varName": "channelcreated",
       "info": "1",
       "storage": "1",
       "varName2": "id",
-      "name": "Store Role Info"
+      "name": "Store Voice Channel Info"
     },
     {
-      "role": "3",
-      "varName": "rolecreated",
-      "info": "3",
+      "channel": "3",
+      "varName": "channelcreated",
+      "info": "2",
       "storage": "1",
-      "varName2": "color",
-      "name": "Store Role Info"
+      "varName2": "name",
+      "name": "Store Voice Channel Info"
     },
     {
-      "title": "Rola stworzona",
+      "channel": "3",
+      "varName": "channelcreated",
+      "info": "4",
+      "storage": "1",
+      "varName2": "limit",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "title": "__**Canal de voz criado**__",
       "author": "",
-      "color": "${tempVars(\"color\")}",
+      "color": "#20fc3a",
       "url": "",
       "authorIcon": "",
       "authorUrl": "",
@@ -116,23 +100,46 @@
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Nazwa",
-      "message": "${tempVars(\"rolecreated\")}",
+      "fieldName": "__**Nome:**__",
+      "message": "${tempVars(\"name\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "limit",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "2",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__**Limite de pessoas:**__",
+      "message": "${tempVars(\"limit\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "__**Limite de usuário:**__",
+      "message": "Sem Limite",
       "inline": "0",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "embed",
-      "fieldName": "Kolor",
-      "message": "${tempVars(\"color\")}",
-      "inline": "0",
-      "name": "Add Embed Field"
-    },
-    {
-      "storage": "1",
-      "varName": "embed",
-      "message": "ID : ${tempVars(\"id\")}",
+      "message": "ID: ${tempVars(\"id\")}",
       "footerIcon": "",
       "name": "Set Embed Footer"
     },
@@ -141,34 +148,21 @@
       "varName": "embed",
       "channel": "6",
       "varName2": "mlchannel",
-      "storage3": "0",
-      "varName3": "",
-      "iffalse": "0",
-      "iffalseVal": "",
       "name": "Send Embed Message"
     },
     {
       "server": "0",
       "varName": "",
-      "dataName": "rc_system",
+      "dataName": "vcc_system",
       "defaultVal": "0",
       "storage": "1",
-      "varName2": "rc_sys",
+      "varName2": "vcc_sys",
       "name": "Store Server Data"
     },
     {
       "server": "0",
       "varName": "",
-      "dataName": "log_system",
-      "defaultVal": "0",
-      "storage": "1",
-      "varName2": "logcount",
-      "name": "Store Server Data"
-    },
-    {
-      "server": "0",
-      "varName": "",
-      "dataName": "rc_system",
+      "dataName": "vcc_system",
       "changeType": "1",
       "value": "1",
       "name": "Control Server Data"
