@@ -2,6 +2,7 @@
 
 
 Commands:
+
 [p]setlog: Definir canal delogs.
 
 [p]togglelog: Ativar/Desativar os tipos de log.
